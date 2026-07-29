@@ -21,14 +21,6 @@ rootProject.buildDir = "../build"
 
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-    
-    // Solusi khusus untuk purchases_flutter & plugin lama:
-    // Memaksa plugin android dipasang sebelum project dievaluasi
-    project.pluginManager.withPlugin('java-base') {
-        if (!project.plugins.hasPlugin('com.android.application') && !project.plugins.hasPlugin('com.android.library')) {
-            project.plugins.apply('com.android.library')
-        }
-    }
 }
 
 subprojects {
