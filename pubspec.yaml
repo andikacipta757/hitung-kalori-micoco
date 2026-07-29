@@ -1,0 +1,42 @@
+name: hitung_kalori_micoco
+description: "Aplikasi pemantau kalori, gizi, water tracker, dan analisis makanan AI oleh Micoco."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Icons
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.1.0
+  fl_chart: ^0.66.0 # Untuk grafik laporan tren mingguan/bulanan
+
+  # Auth & Cloud Sync
+  google_sign_in: ^6.2.1
+  shared_preferences: ^2.2.2 # Simpan status lokal & data harian
+
+  # Monetization (Ads & Subscription)
+  google_mobile_ads: ^5.0.0 # Banner & Interstitial ads
+  purchases_flutter: ^8.0.0 # RevenueCat / In-App Purchases (29rb/bln, 240rb/thn)
+
+  # Features (Barcode & AI Camera)
+  mobile_scanner: ^5.0.0 # Scan barcode kemasan
+  image_picker: ^1.0.7 # Ambil foto makanan dari kamera/galeri
+  http: ^1.2.0 # Panggilan API makanan & AI
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Folder asset untuk menyimpan gambar pendukung
+  assets:
+    - assets/images/
