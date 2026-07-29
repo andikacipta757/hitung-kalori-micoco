@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.hitung_kalori_micoco" // Sesuaikan dengan package name kamu
+    namespace "com.example.hitung_kalori_by_micoco"
     compileSdk 34
 
     compileOptions {
@@ -36,7 +36,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.hitung_kalori_micoco" // Sesuaikan dengan package name kamu
+        applicationId "com.example.hitung_kalori_by_micoco"
         minSdk 21
         targetSdk 34
         versionCode flutterVersionCode.toInteger()
@@ -46,6 +46,8 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
         }
     }
 }
