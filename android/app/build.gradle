@@ -23,9 +23,8 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.micoco.hitungkalori"
-    compileSdkVersion 34
-    ndkVersion flutter.ndkVersion
+    namespace "com.example.hitung_kalori_micoco"
+    compileSdk 34
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -37,15 +36,17 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.micoco.hitungkalori"
-        minSdkVersion 21
-        targetSdkVersion 34
+        applicationId "com.example.hitung_kalori_micoco"
+        minSdk 21
+        targetSdk 34
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
         release {
+            // Menggunakan konfigurasi default untuk signing dulu agar build APK sukses
             signingConfig signingConfigs.debug
             minifyEnabled false
             shrinkResources false
@@ -57,4 +58,6 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
