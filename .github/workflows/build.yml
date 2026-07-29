@@ -26,13 +26,15 @@ jobs:
         with:
           flutter-version: '3.22.3'
           channel: 'stable'
-          cache: true
+
+      - name: Clean Previous Builds
+        run: flutter clean
 
       - name: Get Dependencies
         run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --release
+        run: flutter build apk --release --no-daemon
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
