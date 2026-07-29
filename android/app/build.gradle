@@ -46,7 +46,6 @@ android {
 
     buildTypes {
         release {
-            // Menggunakan konfigurasi default untuk signing dulu agar build APK sukses
             signingConfig signingConfigs.debug
             minifyEnabled false
             shrinkResources false
@@ -56,8 +55,4 @@ android {
 
 flutter {
     source '../..'
-}
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
